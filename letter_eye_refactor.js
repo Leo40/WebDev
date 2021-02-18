@@ -22,6 +22,3 @@ for(i=1; i<=myNum - 2; i++){
 
 //Bottom
 printChars(myNum, "*");
-
-
-
