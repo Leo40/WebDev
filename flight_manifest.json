@@ -1,0 +1,60 @@
+[
+	{
+		"R": "Reservation",
+		"S": "Seat Verification",
+		"X": "Exit the System"
+	},
+	{
+		"B": "Business Class",
+		"E": "Economy Class"
+	},
+	{
+		"R": "Reservation",
+		"B": "Boarding",
+		"X": "Exit the System"
+	},
+	[
+		[
+			"X",
+			" ",
+			" ",
+			" ",
+			" ",
+			" "
+		],
+		[
+			" ",
+			" ",
+			" ",
+			" ",
+			" "
+		],
+		[
+			" ",
+			" ",
+			" ",
+			" ",
+			" "
+		],
+		[
+			" ",
+			" ",
+			" ",
+			" ",
+			" "
+		],
+		[
+			" ",
+			" ",
+			" ",
+			" ",
+			" "
+		]
+	],
+	{
+		"firstName": "Mustafa",
+		"lastName": "Yusuf",
+		"passportNumber": "ABC123",
+		"seat": "1a"
+	}
+]
