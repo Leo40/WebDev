@@ -1,0 +1,96 @@
+@startuml Hello 
+
+class BaseScreen{
+    string Title
+    string PlayerStatus               
+    Menu Menu
+}
+
+class Menu{
+    string Title
+    string Prompt
+    MenuItems MenuItems
+    Compare/Confirmation Compare/Confirmation
+    Compare/Confirmation()
+    AddMenuItem(MenuItem menuItem)
+}
+
+class MainScreen{
+    string Title
+    dealCards()
+}
+
+class PlayerOneScreen{
+    string Title
+    string PlayerStatus
+    Menu Menu
+    dealCards()
+}
+
+class PlayerTwoScreen{
+    string Title
+    string PlayerStatus
+    Menu Menu
+    dealCards()
+}
+
+class Card{
+    Suit Suit
+    Rank Rank
+}
+
+class Rank{
+    string RankItems[,]
+}
+
+class Suit{
+    string Clubs
+    string Spades
+    string Hearts
+    string Diamonds
+}
+
+class Deck {
+    Rank Rank
+    Suit Suit
+    Card [,]
+    shuffle()
+    pickCard()
+}
+
+Class Hand {
+    Object[] PlayerHand
+    Object[] DealerHand
+    setHand()
+    getHand()
+}
+
+class MenuItem {
+    string Shortcut
+    string Label
+    BaseScreen Action
+}
+
+Card "1" *-- "1" Rank : has rank
+
+Card "1" *-- "1" Suit : has suit
+
+Deck "1" o-- "52" Card : form a deck
+
+BaseScreen "1" <|-- "1" MainScreen : extends
+
+BaseScreen "1" <|-- "1" PlayerOneScreen : extends
+
+BaseScreen "1" <|-- "1" PlayerTwoScreen : extends
+
+BaseScreen "1" *-- "1" Menu : has menu
+
+BaseScreen "1" --> "1" Deck : uses 
+
+BaseScreen "1" --> "1" Hand : uses 
+
+Menu "1" *-- "0..*" MenuItem : has menu items
+
+
+
+@enduml
