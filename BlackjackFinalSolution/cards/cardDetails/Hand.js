@@ -22,8 +22,7 @@ export default class Hand {
                 this.cardSum += 10;
                 return;
             }                  
-            this.cardSum += card.rank; 
-            return;                       
+            this.cardSum += card.rank;                                  
         }
 
         if(this.cards.length === 2){
